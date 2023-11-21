@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+header{
+    height: 60px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+
+}
+.Dashboard{
+    margin: 10px;
+}
+.AI{
+    width: 12%;
+}
