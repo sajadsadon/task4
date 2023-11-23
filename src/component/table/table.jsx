@@ -5,7 +5,7 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 
 const EditModal = () => {
-    const { open, setOpen, title, price, setTitle, setPrice, id } = useAppStore();
+    const { isOpen, setOpen, title, price, setTitle, setPrice, id } = useAppStore();
     const [loading, setLoading] = useState(false);
   
     const handleSave = () => {
@@ -28,8 +28,8 @@ const EditModal = () => {
     };
   
     return (
-        
-      <Modal open={open} onClose={() => setOpen(false)} >
+        <div className="Modal-content">
+      <Modal  open={isOpen} onClose={() => setOpen(false)} >
         <h2>Edit Product</h2>
         <input
           placeholder="Title"
@@ -47,6 +47,7 @@ const EditModal = () => {
         <br />
         <button onClick={() => handleSave()}>{loading ? "Lodaing...": "Save"}</button>
       </Modal>
+      </div>
     );
   };
 
@@ -90,7 +91,7 @@ function Table() {
         <h4>products</h4>
      
         <table>
-          <thead style={{ background: "red" }}>
+          <thead style={{ background: "#2ecc71" }}>
             <tr>
               <th>Number</th>
               <th>Title</th>
